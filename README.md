@@ -28,3 +28,33 @@ To create my art assests I used the program Paint.NET although I ran into issues
 
 <img src="http://i.imgur.com/yFNaPSn.png">
 
+Finished:
+<head>
+		<meta charset="UTF-8">
+		<title>sharkgame</title>
+		<style type="text/css" media="screen">
+		html, body { height:100%; background-color: #ffffff;}
+		body { margin:0; padding:0; overflow:hidden; }
+		#flashContent { width:100%; height:100%; }
+		</style>
+	</head>
+	<body>
+		<div id="flashContent">
+			<object type="application/x-shockwave-flash" data="https://github.com/rosshalpin/flash-project/blob/master/sharkgame.swf?raw=true" width="300" height="500" id="sharkgame" style="float: none; vertical-align:middle">
+				<param name="movie" value="sharkgame.swf" />
+				<param name="quality" value="high" />
+				<param name="bgcolor" value="#ffffff" />
+				<param name="play" value="true" />
+				<param name="loop" value="true" />
+				<param name="wmode" value="window" />
+				<param name="scale" value="showall" />
+				<param name="menu" value="true" />
+				<param name="devicefont" value="false" />
+				<param name="salign" value="" />
+				<param name="allowScriptAccess" value="sameDomain" />
+				<a href="http://www.adobe.com/go/getflash">
+					<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+				</a>
+			</object>
+		</div>
+	</body>
