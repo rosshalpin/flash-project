@@ -27,3 +27,5 @@ To start making a game I usually start with a mockup. A mockup being an idea of 
 To create my art assests I used the program Paint.NET although I ran into issues when animating the movieclip and resorted to Photoshop to create a .psd of the sprites. Below is a sprite sheet of the sharks movement.  
 
 <img src="http://i.imgur.com/yFNaPSn.png">
+
+<img src="http://i.imgur.com/YdFNg5N.png">
