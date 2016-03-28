@@ -42,4 +42,10 @@ Originally I was editing each of the objects x and y values and other attributes
 
 I use the same method for addChild(); in this function, using an object array containg all the objects I want to display at this point.
 
+In the on_enter_frame function I create the infinitely scrolling background by creating two background movieclips. Increasing background1.x, checking if the background1.x has moved past the stage width, if so setting it back to 0. Then I set the background2.x to background1.x + the stage width(in this case 297).
+
+Having already set a health variable, I use the array and for loop technqiue again for the oil drums. I check if the sharks x,y is within 10,10 of an oil drum object's x,y. If so, I use a for loop that executes once and I take away health while also moving that object offscreen by setting its x to a value offscreen. This is so only the set amount of health is taken away once and since the damage corresponds to the shark and oil drums location, i need to move the expended oil so no more health is taken. I use the same technique for the boat.
+
+Next I set the boat alert signs location. I do this by checking if the boat has gone off the stage and in which direction. So I check if boat.x is less than 0 or create than the stage width. Then whichever it is, I set the alert to have an x value closer to 0 or closer to 297. I then set its y value to same as the boats. If the boat is not within the tresholds I have set, I make the alert sign dissappear(as this means the boat is onscreen).
+
 
