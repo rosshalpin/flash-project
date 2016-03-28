@@ -139,6 +139,14 @@
 				}
 			}
 			
+			
+			//if shark x,y is within 25,25 of boat x,y
+			if ((shark.x < boat1.x + 25 && shark.x > boat1.x - 25) && (shark.y < boat1.y + 25 && shark.y > boat1.y - 25)) {
+				for (var ki = 0; ki < 1; ki++) {
+					health -= 10; //take away health
+				}
+			}
+			
 			//set alert to be on the side of the incoming boat
 			if (boat1.rot == -90 && boat1.x > -300 && boat1.x < -100) { //left side
 				alert1.x = 30;
@@ -188,12 +196,6 @@
 				shark.y = 900; //move shark off screen
 			}
 			
-			//if shark x,y is within 25,25 of boat x,y
-			if ((shark.x < boat1.x + 25 && shark.x > boat1.x - 25) && (shark.y < boat1.y + 25 && shark.y > boat1.y - 25)) {
-				for (var ki = 0; ki < 1; ki++) {
-					health -= 10; //take away health
-				}
-			}
 			//health bar logic
 			if (health == 50) {
 				heart_txt.text = String("♥♥♥♥♥");

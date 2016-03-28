@@ -10,7 +10,6 @@
 		public var speed: Number = 0.5;
 		public var accelerate, turn_left, turn_right: Boolean = false;
 		
-		
 		public function sharkMC(posx: int, posy: int): void {
 			x = posx;
 			y = posy;

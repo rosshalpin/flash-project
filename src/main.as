@@ -37,8 +37,9 @@
 		}
 		//on key up
 		public function keys_up(e: KeyboardEvent): void {
-			if (contains(gc) != true && ent == true && e.keyCode == 13) {
+			if (ent == true && e.keyCode == 13) {
 				//if the game is on the screen, ent is true and entered is press
+				
 				addChild(gc); //reset game
 
 			}
