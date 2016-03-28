@@ -1,10 +1,14 @@
 # flash-project
 Online Written Report for CS270
+### Instructions
+To play game, download zip. Extract it. Go into flash-project-master folder and click main.html.
+Controls: Up, Left, Right & Enter key for restart. 
 ### The Task
 To complete a flash tutorial and adapt it originally for my own use. 
 ### The idea
 After watching the films Jaws, Jaws 2 & Jaws:The Revenge, I decided to create a Jaws-inspired arcade game where you play the shark and the goal is to attack beach-goers, swimmers etc. for points. I will also be using a pixelart style. 
 The tutorial I plan to adapt to create this will be a [driving game tutorial](http://www.emanueleferonato.com/2010/06/16/create-a-flash-racing-game-tutorial-as3-version/) which is an AS3 updated version of this previous [AS2 tutorial](http://www.emanueleferonato.com/2007/05/15/create-a-flash-racing-game-tutorial/). The AS2 tutorial covers the logic while the AS3 is updated code. I have chosen this specific tutorial as the restricted movement of a car is very similiar to the restricted movement of a shark. 
+
 ### The Tutorial
 For my purposes I only needed 1/18 steps of the tutorial, the basic idea of this step is to move and rotate a Movie Clip around a scene in a similiar way to how a vehicle moves when viewed from above. To do this, the tutorial uses trigonometry for all the movements of the vehicle. Trigonometry applies here because Flash uses a Cartesian coordinate system, which means it has an X and a Y axis. 
 
@@ -19,6 +23,8 @@ For controls we use two event listeners for key presses and key releases. In ord
 Using the constructor function for car_mc we update its x and y positions along with a event listener to check if its been added to the stage.
 
 In our main class we create a new shark object and set its starting x and y coordinates.
+### The Game
+The basic idea is to have a goal and obstacles in a game. So our goal will be to eat swimmers for points, while avoiding eating oil drums and speeding boats. This is the fully realised idea that came about during creation, as you will see below in the mockup I had not planned the enemies and obstacles yet. 
 ### Adaptation
 To start making a game I usually start with a mockup. A mockup being an idea of what the game might look like, with ideas I might be able to implement. I usually set the style at this point also.
 
@@ -60,3 +66,29 @@ A gif of our final result:
 
 <img src="http://i.imgur.com/AciTYxt.gif">
 
+### What was hard/easy
+The easiest part was probably the tutorial. Movement sounds difficult until you see its just clever ways of changing x and y values. I also didnt need to focus much on trigonometry as I was not creating a racing game.
+
+I found using external .as files instead of using the timeline to be less confusing and cleaner, as I have experience with the Lightweight Java Game  Library(famously used for minecraft) it felt more natural to not have a visual editor anyway.
+
+Creating the movieclips was very easy and the art assets even easier as I am well versed in the use on Paint Programs, my choice of "Pixelart" style also made things simple. 
+
+I found it difficult working with the on_enter_frame functions that are called at my set framerate. This makes setting random variables difficult along with increasing a variable only once. 
+
+Another thing I found hard was changing from the menu to the game and then reseting. It's not as easy as gotoAndstop(2) in the actions panel. The proper usage of removeChild seems to be a mystery as no matter what I did it would throw back runtime errors in the Output. What I figured out works perfectly for changing from the menu to the game but the reseting isnt fully what I wanted. It seems to result in laggyness which is not hardware related as I tested it on different systems. 
+
+I found making my code more efficient and tidier to be challenging but wasn't someting I got stuck on. 
+
+AS3 is very very similiar to java when programming games and thus made the overall experience challenging but not too difficult.
+
+###Innovation
+Most arcade games on the internet are made with flash, and there are a lot of top down games out there. I do believe my shark game is unique in a way but it definitely borrows ideas from games Ive played before, like having barrels of oil that are detremental to your health. Oil drums are almost a trope at this point. Having an enemy that causes almost instant death that appears out of random places on the screen is also another trope that is used a lot in mobile games. There are plenty of 3D shark/jaws games out there but not a lot of 2D arcade style ones that I've seen. It's very difficult noawadays to go against the grain unless you start entering into the realms of procedurally generated stories and universes where no two players experiences are the same. 
+Overall it was a pretty standard arcade game, it has a clear goal and clear obstacles. A game with game mechanics like this could have been made in the 80s in another form. 
+
+###What I learned
+
+I learned that making a simple game is at its core just moving points around a cartesian coordinate system. And having certain things happen when points come together. I also learned that programming a game can be difficult in some places, but its only as difficult as you want it to be. With some games the math is the most difficult part, like calculating vectors and angles and having things collide etc. 
+
+I also learned that AS3 is straightforward, its very easy to learn. I was able to create a game with the libraries that come vanilla with flash professional CC and with a bit of trigonometric math, so mild paint skills it doesnt take much to get a game running. 
+
+With about 100 lines of code and two images, the author of the tutorial had a virtual yet more advanced Scalextric. 
