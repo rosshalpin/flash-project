@@ -16,13 +16,16 @@ For my purposes I only needed 1/18 steps of the tutorial, the basic idea of this
 
 This img from the tutorial shows the math needed to create the movement of the vehicle, along with its utilisation of trigonometry in a cartesian coordinate system. As flash uses horizontal and vertical vectors, this math is needed to calculate their components, in this case the speed.  Another hurdle in flash is that it does not understand degrees and thus we must convert them to radians(although degrees are fine for our rotation of the MovieClip).
 
-At the start of the tutorial I set my fps to 24 frames per second. This dictates how fast or slow the game runs. Thus the tutorial uses a technique commonly referred to as an OnEnterFrame function, which will be called by its event handler 24 times a second,  or whatever fps you have set. Without fps we would not be able to create the movement of the vehicle. 
+At the start of the tutorial I set my fps to 24 frames per second. This dictates how fast or slow the game runs. Thus the tutorial uses a technique commonly referred to as an On_Enter_Frame function, which will be called by its event handler 24 times a second,  or whatever fps you have set. Without fps we would not be able to create the movement of the vehicle. 
 
 For controls we use two event listeners for key presses and key releases. In order to be able to press multiple keys at once we use booleans for each key press/release. So if I press Up+Left, the keypress boolean for each key will be true, and the functions will call their respective if statements. Using normal techniques with key event listeners does not work so well for games as smooth movement is required along with multiple key presses. 
 
 Using the constructor function for car_mc we update its x and y positions along with a event listener to check if it's been added to the stage.
 
-In our main class we create a new shark object and set its starting x and y coordinates.
+In our main class we create a new car_mc object and set its starting x and y coordinates.
+
+The tutorial basically updates the x and y coordinates of a MovieClip using trigonometric and rotational math to give us the characteristics of a vehicle. it does this in accordance with the framerate giving us smooth movement as our values are constantly updated.
+
 ### The Game
 The basic idea is to have a goal and obstacles in a game. So our goal will be to eat swimmers for points, while avoiding eating oil drums and speeding boats. This is the fully realised idea that came about during creation, as you will see below in the mockup I had not planned the enemies and obstacles yet. 
 ### Adaptation
