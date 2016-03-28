@@ -24,8 +24,22 @@ To start making a game I usually start with a mockup. A mockup being an idea of 
 
 <img src="http://i.imgur.com/Gjs5akf.png">
 
-To create my art assests I used the program Paint.NET although I ran into issues when animating the movieclip and resorted to Photoshop to create a .psd of the sprites. Below is a sprite sheet of the sharks movement.  
-
-<img src="http://i.imgur.com/yFNaPSn.png">
+To create my art assests I used the program Paint.NET although I ran into issues when animating the movieclip and resorted to Photoshop to create a .psd of the shark. Below is all the art assets in one image, including a spritesheet version of the sharks movement.  
 
 <img src="http://i.imgur.com/YdFNg5N.png">
+
+As each asset will be moving(along x and y coords) I needed to make each one a MovieClip with a corresponding .as class that would allow me to set their starting x and y values. Simply have their constructor function take in two int variables and assign them to their x and y positions. Most of the assets will be static but I plan to make them random each time you play. So almost all the MovieClips will have almost identical classes that just take in x and y values.
+
+Apart from the MovieClip classes, I will have a menu class, game control class and a main class. I will use the main class for switching between the menu to the game and then for reseting the game. 
+
+In the main class I have a function containing event listeners for KEY_UP and KEY_DOWN Keyboard Events. This is also where I will create the menu object. The KEY_DOWN function will create the game object, and then if the enter key is pressed down, remove the menu and add the game to the display. This is done with addchild() and removeChild(). 
+
+The KEY_UP function will add the game to display again using addChild(). This is something that I could not quite get correct. removing the game object would lead to errors but adding the game object again doesnt lead to any errors or graphical glitches but it does seem to cause the app to slow down after repeatedly mashing the enter key when adding more game objects.
+
+In the gameControl class I declare all the objects, textfields, variables that I require, and then I create the objects in the game function. Within this function I have an event listener that will exectute my on_enter_frame function which I spoke of before in the tutorial. Almost the entirety of the code in this class is my own, the tutorial code will be used in the sharkMC class for controlling the shark. 
+
+Originally I was editing each of the objects x and y values and other attributes individually but I felt this was adding too much clutter, so I replaced them with for loops that go through arrays containing objects and giving them the attributes I want. As this is the game function this is only executed once when this class is called in the main class. If I was to add random attributes in the on_enter_frame function, I would get 24 random variables a second for each attribute and that would be mayhem. So for example in pseudo code, instead of saying swimmer.x = random and swimmer2.x = random, I say swimmer array = (swimmer1, swimmer2). Then i make a for loop which increase a variable i to the legth of swimmer array. And I say swimmer[i] = random. This is much cleaner and requires much less lines of code. 
+
+I use the same method for addChild(); in this function, using an object array containg all the objects I want to display at this point.
+
+
