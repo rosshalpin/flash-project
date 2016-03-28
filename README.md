@@ -89,6 +89,6 @@ Overall it was a pretty standard arcade game, it has a clear goal and clear obst
 
 I learned that making a simple game is at its core just moving points around a cartesian coordinate system. And having certain things happen when points come together. I also learned that programming a game can be difficult in some places, but its only as difficult as you want it to be. With some games the math is the most difficult part, like calculating vectors and angles and having things collide etc. 
 
-I also learned that AS3 is straightforward, its very easy to learn. I was able to create a game with the libraries that come vanilla with flash professional CC and with a bit of trigonometric math, so mild paint skills it doesnt take much to get a game running. 
+I also learned that AS3 is straightforward, its very easy to learn. I was able to create a game with the libraries that come vanilla with flash professional CC and with a bit of trigonometric math, some mild paint skills it doesnt take much to get a game running. 
 
-With about 100 lines of code and two images, the author of the tutorial had a virtual yet more advanced Scalextric. 
+AS3 is powerful for content creation, with about 100 lines of code and two images, the author of the tutorial had a virtual yet more advanced Scalextric. 
