@@ -57,5 +57,6 @@ Using code from the tutorial we know define the movement of the shark in the sha
 In our boatMC class we assign a speed that we will use to increase and decrease it's x value. But we start off moving from left to right. Then we have the code for setting its rotation depending on its x value. If it has gone off to the right we set its rotation to 90, and we increase its x value to send it back left. We also set a random y variable. We then do the same but vice versa for the other side of x. Setting its rotation to -90 and we decrease its x value. 
 
 A gif of our final result:
-<img src="http://i.imgur.com/AciTYxt.gifv">
+
+<img src="http://i.imgur.com/AciTYxt.gif">
 
