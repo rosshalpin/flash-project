@@ -24,19 +24,21 @@
 			gc.game();
 			if (e.keyCode == 13 && ent == false) {
 				addChild(gc);
-				removeChild(mnu);
+				if (contains(mnu)) {
+					removeChild(mnu);
+				}
 				ent = true;
 			}
 			if (ent == true && e.keyCode == 13) {
-				if(contains(gc)){
-				removeChild(gc);
+				if (contains(gc)) {
+					removeChild(gc);
 				}
 			}
 
 		}
-		
+
 		public function enter_game2(e: KeyboardEvent): void {
-			
+
 			if (contains(gc) != true && ent == true && e.keyCode == 13) {
 				addChild(gc);
 			}
