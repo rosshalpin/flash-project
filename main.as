@@ -24,9 +24,6 @@
 			gc.game();
 			if (e.keyCode == 13 && ent == false) {
 				addChild(gc);
-				if (contains(mnu)) {
-					removeChild(mnu);
-				}
 				ent = true;
 			}
 			if (ent == true && e.keyCode == 13) {
