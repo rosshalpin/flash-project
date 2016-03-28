@@ -3,7 +3,7 @@
 	import flash.events.Event;
 	
 	public class boatMC extends MovieClip {
-		public var speed: Number = 10;
+		public var speed: Number = 15;
 		public var rot: Number = 0;
 		public function boatMC(posx: int, posy: int): void {
 			//rotation = -90;
