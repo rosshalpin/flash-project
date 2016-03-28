@@ -20,20 +20,22 @@
 			var speed_x: Number = Math.sin(rotation * 0.0174532925) * speed;
 			x -= speed_x;
 			
+			
+			//when boat goes off screen, rotate it back around and place in random y position
 			if(x > 700){
-				rot = 90;
-				rotation = rot;
-				x += speed_x;
+				rot = 90; //facing right
+				rotation = rot; //change rotation
+				x += speed_x; //increase x
 				for(var d=0;d<1;d++){
-					y = (Math.random() * (400 - 80) + 80);;
+					y = (Math.random() * (400 - 80) + 80); //change boat y position
 				}
 			}
-			else if(x < -300){
-				rot = -90;
-				rotation = rot;
-				x -= speed_x;
+			else if(x < -400){
+				rot = -90; //facing left
+				rotation = rot; //change rotatiob
+				x -= speed_x; //decrease x
 				for(var da=0;da<1;da++){
-					y = (Math.random() * (400 - 80) + 80);
+					y = (Math.random() * (400 - 80) + 80); //change boat y position
 				}
 			}
 		}

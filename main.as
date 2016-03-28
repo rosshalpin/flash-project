@@ -13,30 +13,36 @@
 		var ent: Boolean = false;
 		var ent2: Boolean = false;
 		public function main(): void {
-			stage.addEventListener(KeyboardEvent.KEY_DOWN, enter_game);
-			stage.addEventListener(KeyboardEvent.KEY_UP, enter_game2);
+			stage.addEventListener(KeyboardEvent.KEY_DOWN, keys_down);
+			stage.addEventListener(KeyboardEvent.KEY_UP, keys_up);
+			//create menu
 			mnu = new menu();
 			mnu.menustart();
+			//display menu
 			addChild(mnu);
 		}
-
-		public function enter_game(e: KeyboardEvent): void {
+		//on key down
+		public function keys_down(e: KeyboardEvent): void {
+			
+			//create game
 			gc = new gameControl();
 			gc.game();
-			if (e.keyCode == 13 && ent == false) {
-				removeChild(mnu);
-				addChild(gc);
-				ent = true;
+			if (e.keyCode == 13 && ent == false) { //if I press enter and ent is false
+				removeChild(mnu); //remove menu
+				addChild(gc); //display game
+				ent = true; //set ent to true so this only happens first time i hit enter
 			}
+			
 
 		}
-
-		public function enter_game2(e: KeyboardEvent): void {
-			ent2 = true;
+		//on key up
+		public function keys_up(e: KeyboardEvent): void {
 			if (contains(gc) != true && ent == true && e.keyCode == 13) {
-				addChild(gc);
+				//if the game is on the screen, ent is true and entered is press
+				addChild(gc); //reset game
 
 			}
+			
 
 		}
 
