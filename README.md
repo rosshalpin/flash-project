@@ -1,7 +1,7 @@
 # flash-project
 Online Written Report for CS270
 ### Instructions
-To play game, download zip. Extract it. Go into flash-project-master folder and click main.html.
+To play game, download zip. Extract it. Go into flash-project-master folder and click main.swf or main.html if that doesnt work.
 Controls: Up, Left, Right & Enter key for restart. 
 ### The Task
 To complete a flash tutorial and adapt it originally for my own use. 
